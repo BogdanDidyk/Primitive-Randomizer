@@ -13,3 +13,11 @@ function getRandomDigit() {
 function getRandomBoolean() {
     return Math.random() < 0.5;
 }
+
+function getRandomLowerLatinLetter() {
+    return String.fromCharCode(getRandomInteger(97, 122));
+}
+
+function getRandomUpperLatinLetter() {
+    return String.fromCharCode(getRandomInteger(65, 90));
+}
