@@ -5,3 +5,7 @@ function getRandomInteger(min = 0, max = 9) {
 function getrandomFloat(min = 0, max = 9) {
     return Math.random() * (max - min) + min;
 }
+
+function getRandomDigit() {
+    return getRandomInteger();
+}
