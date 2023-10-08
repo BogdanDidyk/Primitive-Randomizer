@@ -9,3 +9,7 @@ function getrandomFloat(min = 0, max = 9) {
 function getRandomDigit() {
     return getRandomInteger();
 }
+
+function getRandomBoolean() {
+    return Math.random() < 0.5;
+}
