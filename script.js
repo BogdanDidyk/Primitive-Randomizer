@@ -27,3 +27,8 @@ function getRandomItemFrom(iterable) {
     const randomIndex = getRandomInteger(0, arr.length - 1);
     return arr[randomIndex];
 }
+
+function getRandomSpecialCharacter() {
+    const SPECIAL_CHARACTERS = "~!@#$%^&*()_-+={}[]|:;<>,.?/'\"`\\";
+    return getRandomItemFrom(SPECIAL_CHARACTERS);
+}
