@@ -21,3 +21,9 @@ function getRandomLowerLatinLetter() {
 function getRandomUpperLatinLetter() {
     return String.fromCharCode(getRandomInteger(65, 90));
 }
+
+function getRandomItemFrom(iterable) {
+    const arr = Array.from(iterable);
+    const randomIndex = getRandomInteger(0, arr.length - 1);
+    return arr[randomIndex];
+}
