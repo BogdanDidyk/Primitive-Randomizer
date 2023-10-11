@@ -32,3 +32,26 @@ function getRandomSpecialCharacter() {
     const SPECIAL_CHARACTERS = "~!@#$%^&*()_-+={}[]|:;<>,.?/'\"`\\";
     return getRandomItemFrom(SPECIAL_CHARACTERS);
 }
+
+function getRandomString(length, randomStringOptions = {}) {
+    const {
+        useDigits = true,
+        useLowerLatinLetters = true,
+        useUpperLatinLetters = true,
+        useSpecialCharacters = true
+    } = randomStringOptions;
+    
+    const options = [];
+    if (useDigits === true) options.push(getRandomDigit);
+    if (useLowerLatinLetters === true) options.push(getRandomLowerLatinLetter);
+    if (useUpperLatinLetters === true) options.push(getRandomUpperLatinLetter);
+    if (useSpecialCharacters === true) options.push(getRandomSpecialCharacter);
+    
+    let str = "";
+    for (let i = 0; i < length; i++) {
+        const randomFunc = getRandomItemFrom(options);
+        str += randomFunc();
+    }
+    
+    return str;
+}
